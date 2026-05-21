@@ -1,0 +1,482 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #333;
+    /*
+    font-family: "Lato", "Noto Sans JP",
+        "Yu Gothic Medium", "YuGothic", "sans-serif";
+    */
+    font-family: "Gen Interface JP", sans-serif;
+    font-weight: 400; /* 100–800 */
+        }
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 640px;
+    margin-bottom: 10rem;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-size: 5.6rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    padding: 3rem 2.4rem 1.6rem;
+    line-height: 1.1;
+}
+
+.header_navigation ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.header_navigation ul li {
+    width: 25%;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.header_navigation ul li a {
+    display: block;
+    color: #fff;
+}
+
+.header_navigation ul li a:hover {
+    color: #aaa;
+}
+
+.main {
+    width: 100%;
+}
+
+.main_article {
+    width: 100%;
+    margin-bottom: 8rem;
+}
+
+.main_article h2 {
+    margin-bottom: 1.6rem;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #e62f8b;
+}
+
+.main_article p {
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.main_article img {
+    width: 100%;
+    margin-top: 1.6rem;
+    display: block;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.footer_address {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.footer_address span {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #e62f8b;
+}
+
+.footer_copyright {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 959px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .header {
+        height: 0;
+        padding-top: 100%;
+        margin-bottom: 16rem;
+        background-image: url("../images/header_sp.jpg");
+        background-size: contain;
+        background-position: center top;
+    }
+
+    .header_navigation ul {
+        flex-wrap: wrap;
+        background-color: #333;
+    }
+
+    .header_navigation ul li {
+        width: 50%;
+        padding: 1rem 0;
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #333;
+    }
+
+    .footer_address,
+    .footer_copyright {
+        font-size: 1.2rem;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+    }
+}
+
+/* ===== Intro Section ===== */
+.intro {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+}
+
+.intro_char {
+    flex: 0 0 220px;
+}
+
+.intro_char img {
+    width: 100%;
+    display: block;
+}
+
+.intro_content {
+    flex: 1;
+    padding: 0 2rem 3rem;
+}
+
+.intro_heading {
+    display: inline-block;
+    background-color: #c8ff00;
+    color: #222;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.intro_body {
+    font-size: 1.5rem;
+    line-height: 1.9;
+    color: #333;
+}
+
+/* ===== Brands Section ===== */
+.brands_heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 4rem 0 3rem;
+    font-family: "Zen Dots", sans-serif;
+    color: #222;
+}
+
+.brand_item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.brand_item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.brand_item:hover img {
+    transform: scale(1.02);
+}
+
+.brand_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 1.8rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+}
+
+.brand_label--cyan   { background-color: #00bcd4; }
+.brand_label--orange { background-color: #f57c00; }
+.brand_label--purple { background-color: #7b2fbe; }
+
+.brands_lower {
+    display: flex;
+    align-items: flex-end;
+}
+
+.brands_lower_char {
+    flex: 0 0 38%;
+}
+
+.brands_lower_char img {
+    width: 100%;
+    display: block;
+}
+
+.brands_lower_cards {
+    flex: 1;
+}
+
+/* ===== Modal Overlay ===== */
+.modal_overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.modal_overlay.is-active {
+    display: block;
+}
+
+/* ===== Modal Window ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 640px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 3.2rem;
+    z-index: 101;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal.is-active {
+    display: block;
+}
+
+.modal_inner {
+    position: relative;
+}
+
+.modal_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: none;
+    border: 2px solid #333;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.modal_close:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.modal_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 3.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.modal_heading {
+    font-size: 2.6rem;
+    font-weight: bold;
+    border-left: 8px solid currentColor;
+    padding-left: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+}
+
+.modal_head .modal_heading {
+    margin-bottom: 0;
+}
+
+.modal_heading--cyan   { color: #00bcd4; }
+.modal_heading--orange { color: #f57c00; }
+.modal_heading--purple { color: #7b2fbe; }
+
+.modal_logo {
+    width: 100px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.modal_text {
+    font-size: 1.5rem;
+    line-height: 1.85;
+    margin-bottom: 1.4rem;
+    color: #333;
+}
+
+.modal_text--indent {
+    padding-left: 2rem;
+}
+
+.modal_foot {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.modal_foot--reverse {
+    flex-direction: row-reverse;
+}
+
+.modal_char {
+    max-width: 160px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.modal_logo--bottom {
+    max-width: 70px;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* ===== Scroll to Top ===== */
+.scroll_top {
+    display: none;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.scroll_top.is-visible {
+    display: flex;
+}
+
+.scroll_top:hover {
+    background-color: #0097a7;
+    transform: translateY(-3px);
+}
+
+/* ===== Responsive (additions) ===== */
+@media screen and (max-width: 959px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4%;
+    }
+
+    .intro_char {
+        flex: 0 0 auto;
+        width: 45%;
+        max-width: 180px;
+    }
+
+    .intro_char--left  { order: 2; }
+    .intro_content     { order: 1; padding: 2rem 0; }
+    .intro_char--right { order: 3; }
+
+    .brands_heading {
+        font-size: 2.4rem;
+    }
+
+    .brands_lower {
+        flex-direction: column;
+    }
+
+    .brands_lower_char {
+        flex: 0 0 auto;
+        width: 50%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .modal {
+        width: 92vw;
+        padding: 2rem;
+    }
+
+    .modal_head {
+        flex-direction: column-reverse;
+    }
+
+    .modal_logo {
+        width: 70px;
+        margin-bottom: 1rem;
+    }
+
+    .modal_heading {
+        font-size: 2.2rem;
+    }
+
+    .modal_foot,
+    .modal_foot--reverse {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal_char {
+        max-width: 130px;
+    }
+
+    .scroll_top {
+        bottom: 2rem;
+        right: 2rem;
+        width: 4.2rem;
+        height: 4.2rem;
+        font-size: 1.5rem;
+    }
+}

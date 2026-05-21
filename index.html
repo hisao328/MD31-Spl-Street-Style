@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Zen Dots -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!-- Gen Interface JP -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.1.9/cdn/all.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Splatoon Street Style</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Splatoon<br>Street<br>Style</h1>
+            <nav class="header_navigation">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">シリーズ</a></li>
+                    <li><a href="#">ブログ</a></li>
+                    <li><a href="#">コンタクト</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <!-- Splatoonとファッション -->
+            <section class="intro">
+                <div class="intro_char intro_char--left">
+                    <img src="images/mainpage-section1-left.png" alt="">
+                </div>
+                <div class="intro_content">
+                    <h2 class="intro_heading">Splatoonとファッション</h2>
+                    <p class="intro_body">
+                        我々から皆へ、おしゃれ、ブランド、最近はようにスプラトゥーンの熱狂的なプレイヤーが増えた。バンカラ街に登場するファッションブランドは、現実世界の有名ブランドをモチーフにしており、その独特の世界観でファンを魅了している。ぜひお気に入りのブランドを見つけてほしい。
+                    </p>
+                </div>
+                <div class="intro_char intro_char--right">
+                    <img src="images/mainpage-section1-right.png" alt="">
+                </div>
+            </section>
+
+            <!-- My Favorit Brand -->
+            <section class="brands">
+                <h2 class="brands_heading">My Favorit Brand</h2>
+
+                <div class="brand_item" data-modal="modal-shichirin">
+                    <span class="brand_label brand_label--cyan">シチリン</span>
+                    <img src="images/shichirin-card.jpg" alt="シチリン">
+                </div>
+
+                <div class="brands_lower">
+                    <div class="brands_lower_char">
+                        <img src="images/mainpage-under.png" alt="">
+                    </div>
+                    <div class="brands_lower_cards">
+                        <div class="brand_item" data-modal="modal-shigureni">
+                            <span class="brand_label brand_label--orange">シグレニ</span>
+                            <img src="images/shigureni-card.jpg" alt="シグレニ">
+                        </div>
+                        <div class="brand_item" data-modal="modal-tatakikensaki">
+                            <span class="brand_label brand_label--purple">たたきケンサキ</span>
+                            <img src="images/tatakikensaki-card.jpg" alt="たたきケンサキ">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer_address">
+                <p>
+                    <span>Splatoon Street Style</span><br>
+                    東京都目黒区東山1-11-15<br>
+                    中目黒ARK-2 304号室<br>
+                    中目黒駅徒歩8分<br>
+                </p>
+            </div>
+            <div class="footer_copyright">
+                <small>&copy;2026 Ami Okamoto</small>
+            </div>
+        </footer>
+
+        <!-- モーダル: シチリン -->
+        <div class="modal" id="modal-shichirin">
+            <div class="modal_inner">
+                <button class="modal_close" aria-label="閉じる">&times;</button>
+                <div class="modal_head">
+                    <h3 class="modal_heading modal_heading--cyan">シチリン</h3>
+                    <img class="modal_logo" src="images/shichirin-logo.png" alt="シチリンロゴ">
+                </div>
+                <p class="modal_text">バンカラ街のストリートから自然発生したブランド。常識に対する否定、破壊といった思想のもと、無数の素材を合成したギアは、「ありえないくらいダシが効いていて最高」と大人気とのこと。</p>
+                <div class="modal_foot">
+                    <img class="modal_char" src="images/modal-model-shichirin.png" alt="">
+                    <p class="modal_text">主な元ネタはsacai辺り。名前の由来はそのまま料理道具の『七輪』から。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- モーダル: シグレニ -->
+        <div class="modal" id="modal-shigureni">
+            <div class="modal_inner">
+                <button class="modal_close" aria-label="閉じる">&times;</button>
+                <div class="modal_head">
+                    <h3 class="modal_heading modal_heading--orange">シグレニ</h3>
+                    <img class="modal_logo" src="images/shigureni-logo.png" alt="シグレニロゴ">
+                </div>
+                <p class="modal_text">強度の高いアウトドアファッションを作る、大自然が映えるブランド。本格的なアウトドアブランドながら、カジュアルで着心地のいいアイテムが揃っている。カジュアルな外観が、現代を生きる若人たちに人気を発する。</p>
+                <div class="modal_foot modal_foot--reverse">
+                    <img class="modal_char" src="images/modal-model-shigureni.png" alt="">
+                    <p class="modal_text">主な元ネタはパタゴニア辺り。ロゴが山っぽいのが共通する。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- モーダル: タタキケンサキ -->
+        <div class="modal" id="modal-tatakikensaki">
+            <div class="modal_inner">
+                <button class="modal_close" aria-label="閉じる">&times;</button>
+                <h3 class="modal_heading modal_heading--purple">タタキケンサキ</h3>
+                <p class="modal_text">モノトーンで統一されたシックでスタイリッシュなデザインなのが特徴。ブランド名は主席デザイナー（タタキケンサキ氏）が自身の名を冠したもの。</p>
+                <p class="modal_text modal_text--indent">主な元ネタはヨージヤマモト、コム・デ・ギャルソン辺り。名前の由来は料理の「イカの叩き」と、日本近海で獲れる「剣先イカ」と、タケオキクチをもじった造語。</p>
+                <div class="modal_foot">
+                    <img class="modal_logo--bottom" src="images/tatakikensaki-logo.png" alt="タタキケンサキロゴ">
+                    <img class="modal_char" src="images/modal-model-tatakikensaki.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_overlay" id="modal-overlay"></div>
+        <button class="scroll_top" id="scroll-top" aria-label="ページ上部へ戻る">&#9650;</button>
+
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>
